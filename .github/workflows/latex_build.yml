@@ -8,33 +8,31 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Get changed files
-      id: changed-files
-      uses: tj-actions/changed-files@v44
+      - name: Get changed .tex files
+        id: changed-tex
+        uses: tj-actions/changed-files@v44
+        with:
+          files: '**/*.tex'
 
-    - name: Filter .tex files
-      id: tex-files
-      run: |
-        echo "::set-output name=tex_files::$(echo ${{ steps.changed-files.outputs.all_changed_files }} | tr ' ' '\n' | grep '\.tex' | xargs || echo '')"
+      - name: Compile LaTeX documents
+        if: steps.changed-tex.outputs.any_changed == 'true'
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ steps.changed-tex.outputs.all_changed_files }}
+          # Se usa pdflatex por defecto, no es necesario especificarlo
 
-    - name: Compile LaTeX documents
-      if: steps.tex-files.outputs.tex_files != ''
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: ${{ steps.tex-files.outputs.tex_files }}
-        latexmk_use_xelatex: true
-
-    - name: Commit PDFs
-      if: steps.changed-files.outputs.all_changed_files != ''
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -f *.pdf
-        git commit -m "chore: se agregan los PDFs compilados ♻️" || echo "No changes to commit"
-        git push
+      - name: Commit PDFs
+        if: steps.changed-tex.outputs.any_changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -f *.pdf
+          git commit -m "chore: se agregan los PDFs compilados ♻️" || echo "No changes to commit"
+          git push
