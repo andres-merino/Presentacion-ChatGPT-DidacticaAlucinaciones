@@ -1,0 +1,88 @@
+\documentclass[aspectratio=169]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paquetes
+\input{formatoBeamerPUCE}
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows.meta, positioning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Datos
+\title{Exploración del potencial didáctico de las alucinaciones de ChatGPT}
+\author{Andrés Merino}
+\date{Junio 2025}
+\institute{Facultad de Ciencias Exactas, Naturales y Ambientales}
+
+\includeonly{
+% Secciones/01Introduccion,
+% Secciones/02ChatGPT,
+% Secciones/03Alucinaciones,
+% Secciones/04Caso,
+% Secciones/05GPTs,
+Secciones/06Conclusiones,
+}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página de título
+
+\fondo{inicio}
+\begin{frame}[plain]
+    \vspace*{0.85cm}
+    \addtocounter{framenumber}{-1}
+    \hspace*{0.6cm}
+    \begin{minipage}[t]{\dimexpr\textwidth-1cm}
+        \titlepage
+    \end{minipage}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página de índice 
+\fondo{blanco}
+\begin{frame}
+    \frametitle{Contendio}
+    \vspace*{-0.5cm}
+    
+    \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Secciones
+\include{Secciones/01Introduccion}
+\include{Secciones/02ChatGPT}
+\include{Secciones/03Alucinaciones}
+\include{Secciones/04Caso}
+\include{Secciones/05GPTs}
+\include{Secciones/06Conclusiones}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página final
+\fondo{final}
+\begin{frame}[plain]
+\begin{center}
+    \color{white}
+    
+    \vspace{1.5cm}
+    {\Huge\textbf{Gracias}}
+    \vspace{2mm}
+    
+
+    \begin{tabular}{ccc}
+        \href{https://linktr.ee/aemerinot}{\includegraphics[width=2.5cm]{Figuras/QR-links.png}}
+        &\phantom{.\hspace{.5cm}.}&
+        \href{https://github.com/andres-merino/Presentacion-ChatGPT-AulaInvertida}{\includegraphics[width=2.5cm]{Figuras/QR-presentacion.png}}
+        \\
+        \LARGE \faLinkedin\hspace{5mm} \faGithub%\hspace{5mm} \aiOrcidSquare 
+        && 
+        Presentación
+    \end{tabular}
+
+    \vspace{2mm}
+    \textbf{Contacto:} aemerinot@puce.edu.ec
+\end{center}
+\end{frame}
+
+
+\end{document}
