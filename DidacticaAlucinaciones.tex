@@ -5,7 +5,8 @@
 \input{formatoBeamerPUCE}
 \usepackage{tikz}
 \usetikzlibrary{calc, arrows.meta, positioning}
-
+\usepackage{qrcode}
+\definecolor{azul}{RGB}{19, 67, 131}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Datos
 \title{Exploración del potencial didáctico de las alucinaciones de ChatGPT}
@@ -14,11 +15,11 @@
 \institute{Facultad de Ciencias Exactas, Naturales y Ambientales}
 
 \includeonly{
-% Secciones/01Introduccion,
-% Secciones/02ChatGPT,
-% Secciones/03Alucinaciones,
-% Secciones/04Caso,
-% Secciones/05GPTs,
+Secciones/01Introduccion,
+Secciones/02ChatGPT,
+Secciones/03Alucinaciones,
+Secciones/04Caso,
+Secciones/05GPTs,
 Secciones/06Conclusiones,
 }
 \begin{document}
@@ -70,15 +71,16 @@ Secciones/06Conclusiones,
     
 
     \begin{tabular}{ccc}
-        \href{https://linktr.ee/aemerinot}{\includegraphics[width=2.5cm]{Figuras/QR-links.png}}
-        &\phantom{.\hspace{.5cm}.}&
-        \href{https://github.com/andres-merino/Presentacion-ChatGPT-AulaInvertida}{\includegraphics[width=2.5cm]{Figuras/QR-presentacion.png}}
-        \\
+        \textcolor{azul}{\qrcode[height=3cm]{https://linktr.ee/aemerinot}}
+        &
+        \phantom{.\hspace{.5cm}.}
+        &
+        \textcolor{azul}{\qrcode[height=3cm]{https://andres-merino.github.io/Presentacion-ChatGPT-DidacticaAlucinaciones/DidacticaAlucinaciones.pdf}}
+        \\ \\[-2mm]
         \LARGE \faLinkedin\hspace{5mm} \faGithub%\hspace{5mm} \aiOrcidSquare 
         && 
         Presentación
-    \end{tabular}
-
+    \end{tabular}\\
     \vspace{2mm}
     \textbf{Contacto:} aemerinot@puce.edu.ec
 \end{center}
