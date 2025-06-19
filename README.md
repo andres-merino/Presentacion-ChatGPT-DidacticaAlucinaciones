@@ -22,6 +22,9 @@
     <a href="https://www.overleaf.com/read/vpqktkpbfyrr#32ae79">
     <img src="https://img.shields.io/badge/Overleaf-47A141?logo=overleaf&logoColor=fff&style=for-the-badge" alt="Overleaf Badge">
     </a>
+    <a href="https://andres-merino.github.io/Presentacion-ChatGPT-DidacticaAlucinaciones/DidacticaAlucinaciones.pdf" target="_blank">
+  <img src="https://img.shields.io/badge/Ver%20PDF-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Ver PDF">
+</a>
   </p>
 </div>
 
@@ -34,8 +37,11 @@ El material al que hace referencia en la charla, puede ser encontrado aquí: [Ma
 
 ### Construido con
 
-[![LaTeX][LaTeX]][LaTeX-url]
 
+[![LaTeX][LaTeX]][LaTeX-url]
+[![Overleaf](https://img.shields.io/badge/Overleaf-47A141?logo=overleaf&logoColor=fff&style=for-the-badge)](https://www.overleaf.com/)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-22272E?logo=github&logoColor=fff&style=for-the-badge)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff&style=for-the-badge)
 
 ## Créditos
 
