@@ -17,6 +17,7 @@
     ·
     <a href="https://github.com/andres-merino/Presentacion-ChatGPT-DidacticaAlucinaciones/issues">Solicitar cambio</a>
     <br />
+    <br />
     Abrir en 
     <br />
     <a href="https://www.overleaf.com/read/vpqktkpbfyrr#32ae79">
