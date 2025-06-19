@@ -9,9 +9,9 @@
 <br />
 <div align="center">
 
-<h3 align="center">Integración de ChatGPT en la Metodología de Aula Invertida</h3>
+<h3 align="center">Exploración del potencial didáctico de las alucinaciones de ChatGPT</h3>
   <p align="center">
-    Código de la presentación: Integración de ChatGPT en la Metodología de Aula Invertida.   
+    Código de la presentación: Exploración del potencial didáctico de las alucinaciones de ChatGPT.   
     <br />
     <a href="https://github.com/andres-merino/Presentacion-ChatGPT-DidacticaAlucinaciones/issues">Reportar un Problema</a>
     ·
