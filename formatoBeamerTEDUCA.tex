@@ -54,7 +54,7 @@
     \definecolor{gris}{RGB}{88, 88, 87}
     \definecolor{celeste}{RGB}{26, 160, 220}
     % -- Título en hoja de título
-    \setbeamercolor{title}{fg=white}
+    \setbeamercolor{title}{fg=azul,bg=}
     % -- Título de secciones
     \setbeamercolor{titlelike}{fg=white}
     % -- Texto
@@ -67,11 +67,11 @@
     \setbeamercolor{block title alerted}{fg=white,bg=celeste}
     \setbeamercolor{block body alerted}{bg=celeste!15}
     % -- Texto en hoja de título
-    \setbeamercolor{author}{fg=celeste}
+    \setbeamercolor{author}{fg=celeste,bg=}
     \setbeamerfont{author}{series=\bfseries}
-    \setbeamercolor{date}{fg=celeste}
+    \setbeamercolor{date}{fg=celeste,bg=}
     \setbeamerfont{date}{series=\bfseries}
-    \setbeamercolor{institute}{fg=celeste}
+    \setbeamercolor{institute}{fg=celeste,bg=}
     \setbeamerfont{institute}{series=\bfseries}
     % -- Barra de progreso
     \setbeamercolor{progress bar}{bg=white, fg=white}
@@ -129,6 +129,28 @@
 }
 \makeatother
 
+\makeatletter
+\setbeamertemplate{title page}{%
+  % Ajuste este espacio para bajar el título
+  \vspace*{53mm} % mayor valor = más abajo
+
+  \begin{beamercolorbox}[wd=0.75\textwidth,leftskip=-3em,bg=]{title}
+    {\usebeamerfont{title}\inserttitle\par}
+  \end{beamercolorbox}
+
+  \vspace{1mm}
+
+  \begin{beamercolorbox}[wd=0.75\textwidth,leftskip=-3em]{author}
+    {\usebeamerfont{author}\insertauthor\par}
+  \end{beamercolorbox}
+
+  \vspace{-1mm}
+
+  \begin{beamercolorbox}[wd=0.75\textwidth,leftskip=-3em]{institute}
+    {\usebeamerfont{institute}\insertinstitute\par}
+  \end{beamercolorbox}
+}
+\makeatother
 
 
 % -- Formato de bibliografía
